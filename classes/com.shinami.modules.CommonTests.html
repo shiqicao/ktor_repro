@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.shinami.modules.CommonTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.shinami.modules.CommonTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.shinami.modules.html">com.shinami.modules</a> &gt; CommonTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">21</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.902s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">95%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="valid jsonrpc syntax tests"></a>
+<h3 class="failures">valid jsonrpc syntax tests</h3>
+<span class="code">
+<pre>kotlinx.coroutines.channels.ClosedReceiveChannelException: Channel was closed
+	at app//kotlinx.coroutines.channels.Closed.getReceiveException(AbstractChannel.kt:1108)
+	at app//kotlinx.coroutines.channels.AbstractChannel$ReceiveElement.resumeReceiveClosed(AbstractChannel.kt:913)
+	at app//kotlinx.coroutines.channels.AbstractSendChannel.helpClose(AbstractChannel.kt:342)
+	at app//kotlinx.coroutines.channels.AbstractSendChannel.close(AbstractChannel.kt:271)
+	at app//kotlinx.coroutines.channels.SendChannel$DefaultImpls.close$default(Channel.kt:93)
+	at app//io.ktor.websocket.DefaultWebSocketSessionImpl$runIncomingProcessor$1.invokeSuspend(DefaultWebSocketSession.kt:215)
+	at ???(Coroutine boundary.?(?)
+	at com.shinami.modules.CommonTests$8$1$1$1$1.invokeSuspend(CommonTests.kt:184)
+	at io.ktor.client.plugins.websocket.BuildersKt.webSocket(builders.kt:101)
+	at com.shinami.modules.CommonTests$8$1$1.invokeSuspend(CommonTests.kt:182)
+	at com.shinami.modules.CommonTests$myTestApplication$1.invokeSuspend(CommonTests.kt:335)
+	at io.ktor.server.testing.TestApplicationKt$testApplication$builder$1$1.invokeSuspend(TestApplication.kt:288)
+	at kotlinx.coroutines.TimeoutKt.withTimeoutOrNull(Timeout.kt:100)
+	at io.kotest.engine.test.interceptors.InvocationTimeoutInterceptor.intercept(InvocationTimeoutInterceptor.kt:42)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.TestInvocationInterceptor$intercept$2$3.invokeSuspend(TestInvocationInterceptor.kt:36)
+	at io.kotest.mpp.ReplayKt.replay(replay.kt:18)
+	at io.kotest.engine.test.TestInvocationInterceptor$intercept$2.invokeSuspend(TestInvocationInterceptor.kt:31)
+	at io.kotest.engine.test.TestInvocationInterceptor.intercept(TestInvocationInterceptor.kt:30)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TimeoutInterceptor.intercept(TimeoutInterceptor.kt:33)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.BlockedThreadTimeoutInterceptor.intercept(BlockedThreadTimeoutInterceptor.kt:74)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.CoroutineLoggingInterceptor.intercept(CoroutineLoggingInterceptor.kt:30)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.SoftAssertInterceptor.intercept(SoftAssertInterceptor.kt:27)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.AssertionModeInterceptor.intercept(AssertionModeInterceptor.kt:25)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.LifecycleInterceptor.intercept(LifecycleInterceptor.kt:51)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.EnabledCheckInterceptor.intercept(EnabledCheckInterceptor.kt:31)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TestCaseExtensionInterceptor$intercept$2.invokeSuspend(TestCaseExtensionInterceptor.kt:24)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.CoroutineErrorCollectorInterceptor$intercept$3.invokeSuspend(CoroutineErrorCollectorInterceptor.kt:28)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.CoroutineDispatcherFactoryInterceptor$intercept$4.invokeSuspend(coroutineDispatcherFactoryInterceptor.kt:57)
+	at io.kotest.engine.concurrency.FixedThreadCoroutineDispatcherFactory$withDispatcher$4.invokeSuspend(FixedThreadCoroutineDispatcherFactory.kt:53)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.SupervisorScopeInterceptor$intercept$2.invokeSuspend(SupervisorScopeInterceptor.kt:23)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TestFinishedInterceptor.intercept(TestFinishedInterceptor.kt:21)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TestNameContextInterceptor$intercept$2.invokeSuspend(TestPathContextInterceptor.kt:35)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TestPathContextInterceptor$intercept$2.invokeSuspend(TestPathContextInterceptor.kt:20)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.spec.runners.SingleInstanceSpecRunner.runTest(SingleInstanceSpecRunner.kt:121)
+	at io.kotest.engine.spec.runners.SingleInstanceSpecRunner$SingleInstanceTestScope.registerTestCase(SingleInstanceSpecRunner.kt:92)
+	at com.shinami.modules.CommonTests$8.invokeSuspend(CommonTests.kt:175)
+	at io.kotest.core.spec.style.scopes.FunSpecRootScope$context$1.invokeSuspend(FunSpecRootScope.kt:20)
+	at io.kotest.core.spec.style.scopes.RootScopeKt$addTest$1.invokeSuspend(RootScope.kt:36)
+	at io.kotest.engine.test.TestCaseExecutor$execute$innerExecute$1.invokeSuspend(TestCaseExecutor.kt:83)
+	at io.kotest.engine.test.interceptors.CoroutineDebugProbeInterceptor.intercept(CoroutineDebugProbeInterceptor.kt:29)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.InvocationTimeoutInterceptor.intercept(InvocationTimeoutInterceptor.kt:28)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.TestInvocationInterceptor$intercept$2$3.invokeSuspend(TestInvocationInterceptor.kt:36)
+	at io.kotest.mpp.ReplayKt.replay(replay.kt:18)
+	at io.kotest.engine.test.TestInvocationInterceptor$intercept$2.invokeSuspend(TestInvocationInterceptor.kt:31)
+	at io.kotest.engine.test.TestInvocationInterceptor.intercept(TestInvocationInterceptor.kt:30)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TimeoutInterceptor.intercept(TimeoutInterceptor.kt:33)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.BlockedThreadTimeoutInterceptor.intercept(BlockedThreadTimeoutInterceptor.kt:74)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.CoroutineLoggingInterceptor.intercept(CoroutineLoggingInterceptor.kt:30)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.SoftAssertInterceptor.intercept(SoftAssertInterceptor.kt:26)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.AssertionModeInterceptor.intercept(AssertionModeInterceptor.kt:24)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.LifecycleInterceptor.intercept(LifecycleInterceptor.kt:51)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.EnabledCheckInterceptor.intercept(EnabledCheckInterceptor.kt:31)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TestCaseExtensionInterceptor$intercept$2.invokeSuspend(TestCaseExtensionInterceptor.kt:24)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.CoroutineErrorCollectorInterceptor$intercept$3.invokeSuspend(CoroutineErrorCollectorInterceptor.kt:28)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.CoroutineDispatcherFactoryInterceptor$intercept$4.invokeSuspend(coroutineDispatcherFactoryInterceptor.kt:57)
+	at io.kotest.engine.concurrency.FixedThreadCoroutineDispatcherFactory$withDispatcher$4.invokeSuspend(FixedThreadCoroutineDispatcherFactory.kt:53)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.SupervisorScopeInterceptor$intercept$2.invokeSuspend(SupervisorScopeInterceptor.kt:23)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TestFinishedInterceptor.intercept(TestFinishedInterceptor.kt:21)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TestNameContextInterceptor$intercept$2.invokeSuspend(TestPathContextInterceptor.kt:35)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.test.interceptors.TestPathContextInterceptor$intercept$2.invokeSuspend(TestPathContextInterceptor.kt:20)
+	at io.kotest.engine.test.TestCaseExecutor$execute$3$1.invokeSuspend(TestCaseExecutor.kt:92)
+	at io.kotest.engine.spec.runners.SingleInstanceSpecRunner.runTest(SingleInstanceSpecRunner.kt:121)
+	at io.kotest.engine.spec.runners.SingleInstanceSpecRunner$execute$interceptAndRun$2$2.invokeSuspend(SingleInstanceSpecRunner.kt:51)
+	at io.kotest.engine.test.scheduler.SequentialTestScheduler$schedule$3$1$1.invokeSuspend(SequentialTestScheduler.kt:20)
+Caused by: kotlinx.coroutines.channels.ClosedReceiveChannelException: Channel was closed
+	at app//kotlinx.coroutines.channels.Closed.getReceiveException(AbstractChannel.kt:1108)
+	at app//kotlinx.coroutines.channels.AbstractChannel$ReceiveElement.resumeReceiveClosed(AbstractChannel.kt:913)
+	at app//kotlinx.coroutines.channels.AbstractSendChannel.helpClose(AbstractChannel.kt:342)
+	at app//kotlinx.coroutines.channels.AbstractSendChannel.close(AbstractChannel.kt:271)
+	at app//kotlinx.coroutines.channels.SendChannel$DefaultImpls.close$default(Channel.kt:93)
+	at app//io.ktor.websocket.DefaultWebSocketSessionImpl$runIncomingProcessor$1.invokeSuspend(DefaultWebSocketSession.kt:215)
+	at app//kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at app//kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at app//kotlinx.coroutines.EventLoop.processUnconfinedEvent(EventLoop.common.kt:69)
+	at app//kotlinx.coroutines.internal.DispatchedContinuation.resumeWith(DispatchedContinuation.kt:355)
+	at app//io.ktor.utils.io.internal.CancellableReusableContinuation.resumeWith(CancellableReusableContinuation.kt:93)
+	at app//io.ktor.utils.io.ByteBufferChannel.resumeReadOp(ByteBufferChannel.kt:2100)
+	at app//io.ktor.utils.io.ByteBufferChannel.tryTerminate$ktor_io(ByteBufferChannel.kt:388)
+	at app//io.ktor.utils.io.ByteBufferChannel.close(ByteBufferChannel.kt:133)
+	at app//io.ktor.utils.io.ByteWriteChannelKt.close(ByteWriteChannel.kt:165)
+	at app//io.ktor.utils.io.ByteReadChannelKt.copyAndClose(ByteReadChannel.kt:256)
+	at app//io.ktor.utils.io.ByteReadChannelKt$copyAndClose$1.invokeSuspend(ByteReadChannel.kt)
+	at app//kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at app//kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at app//kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)
+	at app//kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
+	at app//kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
+	at app//kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">[gas]</td>
+<td class="success">0.079s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[gas]</td>
+<td class="success">0.055s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[gas]</td>
+<td class="success">0.056s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[key]</td>
+<td class="success">0.118s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[key]</td>
+<td class="success">0.052s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[key]</td>
+<td class="success">0.049s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[node]</td>
+<td class="success">0.080s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[node]</td>
+<td class="success">0.052s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[wallet]</td>
+<td class="success">0.047s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[wallet]</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[wallet]</td>
+<td class="success">0.073s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">ingress</td>
+<td class="success">0.065s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">invalid path key [gas]</td>
+<td class="success">0.064s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">invalid path key [key]</td>
+<td class="success">1.417s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">invalid path key [node]</td>
+<td class="success">0.049s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">invalid path key [wallet]</td>
+<td class="success">0.072s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">valid jsonrpc syntax tests</td>
+<td class="failures">0.106s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">valid key [gas]</td>
+<td class="success">0.066s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">valid key [key]</td>
+<td class="success">0.231s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">valid key [node]</td>
+<td class="success">0.060s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">valid key [wallet]</td>
+<td class="success">0.067s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-04-24 12:51:20.828 [Test worker @coroutine#2] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2023-04-24 12:51:20.868 [Test worker @coroutine#2] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2023-04-24 12:51:21.359 [Test worker @coroutine#2] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2023-04-24 12:51:21.360 [Test worker @coroutine#2] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2023-04-24 12:51:21.390 [Test worker @coroutine#2] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 20.10.23
+  API Version: 1.41
+  Operating System: Docker Desktop
+  Total Memory: 7951 MB
+2023-04-24 12:51:21.471 [Test worker @coroutine#2] INFO  &#x1f433; [testcontainers/ryuk:0.3.4] - Creating container for image: testcontainers/ryuk:0.3.4
+2023-04-24 12:51:21.776 [Test worker @coroutine#2] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2023-04-24 12:51:21.884 [Test worker @coroutine#2] INFO  &#x1f433; [testcontainers/ryuk:0.3.4] - Container testcontainers/ryuk:0.3.4 is starting: b3e8770e1b4bb6ea721315f25dc361cb3f1ddf4e6e26221267e7c48fdb364df2
+2023-04-24 12:51:22.269 [Test worker @coroutine#2] INFO  &#x1f433; [testcontainers/ryuk:0.3.4] - Container testcontainers/ryuk:0.3.4 started in PT0.870235S
+2023-04-24 12:51:22.274 [Test worker @coroutine#2] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2023-04-24 12:51:22.274 [Test worker @coroutine#2] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2023-04-24 12:51:22.274 [Test worker @coroutine#2] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2023-04-24 12:51:22.275 [Test worker @coroutine#2] INFO  &#x1f433; [postgres:14-alpine] - Creating container for image: postgres:14-alpine
+2023-04-24 12:51:22.309 [Test worker @coroutine#2] INFO  &#x1f433; [postgres:14-alpine] - Container postgres:14-alpine is starting: fc51ff5be31d93822226cd70e35381bbf6e448cdb8b404ab06204c8d46eeb59c
+2023-04-24 12:51:23.771 [Test worker @coroutine#2] INFO  &#x1f433; [postgres:14-alpine] - Container postgres:14-alpine started in PT1.496167S
+2023-04-24 12:51:23.841 [Test worker @coroutine#2] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.10.1 by Redgate
+2023-04-24 12:51:23.842 [Test worker @coroutine#2] INFO  o.f.c.i.license.VersionPrinter - See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.10.1
+2023-04-24 12:51:23.842 [Test worker @coroutine#2] INFO  o.f.c.i.license.VersionPrinter - 
+2023-04-24 12:51:24.103 [Test worker @coroutine#2] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:postgresql://localhost:56937/test (PostgreSQL 14.6)
+2023-04-24 12:51:24.157 [Test worker @coroutine#2] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.022s)
+2023-04-24 12:51:24.188 [Test worker @coroutine#2] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table &quot;public&quot;.&quot;flyway_schema_history&quot; ...
+2023-04-24 12:51:24.261 [Test worker @coroutine#2] INFO  o.f.core.internal.command.DbMigrate - Current version of schema &quot;public&quot;: &lt;&lt; Empty Schema &gt;&gt;
+2023-04-24 12:51:24.287 [Test worker @coroutine#2] INFO  o.f.core.internal.command.DbMigrate - Migrating schema &quot;public&quot; to version &quot;1 - create tables&quot;
+2023-04-24 12:51:24.297 [Test worker @coroutine#2] INFO  o.f.c.i.s.DefaultSqlScriptExecutor - +------------+
+| set_config |
++------------+
+|            |
++------------+
+
+2023-04-24 12:51:24.416 [Test worker @coroutine#2] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema &quot;public&quot;, now at version v1 (execution time 00:00.165s)
+2023-04-24 12:51:25.396 [reactor-tcp-nio-1] INFO  org.jooq.Constants - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.17.7
+                                      
+2023-04-24 12:51:25.397 [reactor-tcp-nio-1] INFO  org.jooq.Constants - 
+
+jOOQ tip of the day: Want to learn more about SQL? Check out our many blog posts: https://blog.jooq.org/sql
+
+2023-04-24 12:51:26.158 [DefaultDispatcher-worker-1 @call-context#7] INFO  &#x1f433; [redis:7] - Creating container for image: redis:7
+2023-04-24 12:51:26.207 [DefaultDispatcher-worker-1 @call-context#7] INFO  &#x1f433; [redis:7] - Container redis:7 is starting: 24e5544c127192cbe35fe9dcc771df2d81095cb0bd7106d54cfa02f9907e7464
+2023-04-24 12:51:26.485 [DefaultDispatcher-worker-1 @call-context#7] INFO  &#x1f433; [redis:7] - Container redis:7 started in PT0.327134S
+2023-04-24 12:51:26.509 [DefaultDispatcher-worker-1 @call-context#7] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:26.556 [DefaultDispatcher-worker-1 @call-context#7] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:26.628 [DefaultDispatcher-worker-1 @call-context#7] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2023-04-24 12:51:27.150 [DefaultDispatcher-worker-1 @call-context#7] INFO  ktor.test - Application started in 0.642 seconds.
+2023-04-24 12:51:27.187 [DefaultDispatcher-worker-1 @call-context#7] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:27.377 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.377 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.379 [pool-1-thread-1 @coroutine#5] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:27.400 [DefaultDispatcher-worker-1 @call-context#15] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.400 [DefaultDispatcher-worker-1 @call-context#15] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:27.425 [DefaultDispatcher-worker-1 @call-context#15] INFO  ktor.test - Application started in 0.025 seconds.
+2023-04-24 12:51:27.430 [DefaultDispatcher-worker-1 @call-context#15] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:27.514 [DefaultDispatcher-worker-1 @call-context#21] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.538 [DefaultDispatcher-worker-1 @call-context#21] INFO  ktor.test - Application started in 0.141 seconds.
+2023-04-24 12:51:27.620 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.620 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.622 [pool-1-thread-1 @coroutine#5] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:27.631 [DefaultDispatcher-worker-3 @call-context#36] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.631 [DefaultDispatcher-worker-3 @call-context#36] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:27.667 [DefaultDispatcher-worker-3 @call-context#36] INFO  ktor.test - Application started in 0.036 seconds.
+2023-04-24 12:51:27.672 [DefaultDispatcher-worker-3 @call-context#36] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:27.694 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.694 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.696 [pool-1-thread-1 @coroutine#5] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:27.703 [DefaultDispatcher-worker-5 @call-context#44] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.704 [DefaultDispatcher-worker-5 @call-context#44] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:27.730 [DefaultDispatcher-worker-5 @call-context#44] INFO  ktor.test - Application started in 0.027 seconds.
+2023-04-24 12:51:27.734 [DefaultDispatcher-worker-5 @call-context#44] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:27.738 [DefaultDispatcher-worker-5 @call-context#50] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.739 [DefaultDispatcher-worker-5 @call-context#50] INFO  ktor.test - Application started in 0.038 seconds.
+2023-04-24 12:51:27.761 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.762 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.763 [pool-1-thread-1 @coroutine#5] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:27.771 [DefaultDispatcher-worker-10 @call-context#65] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.772 [DefaultDispatcher-worker-10 @call-context#65] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:27.794 [DefaultDispatcher-worker-10 @call-context#65] INFO  ktor.test - Application started in 0.023 seconds.
+2023-04-24 12:51:27.798 [DefaultDispatcher-worker-10 @call-context#65] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:27.824 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.824 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.826 [pool-1-thread-1 @coroutine#5] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:27.836 [DefaultDispatcher-worker-10 @call-context#73] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.837 [DefaultDispatcher-worker-10 @call-context#73] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:27.864 [DefaultDispatcher-worker-10 @call-context#73] INFO  ktor.test - Application started in 0.028 seconds.
+2023-04-24 12:51:27.868 [DefaultDispatcher-worker-10 @call-context#73] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:27.872 [DefaultDispatcher-worker-10 @call-context#79] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.873 [DefaultDispatcher-worker-10 @call-context#79] INFO  ktor.test - Application started in 0.039 seconds.
+2023-04-24 12:51:27.893 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.893 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.895 [pool-1-thread-1 @coroutine#5] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:27.902 [DefaultDispatcher-worker-8 @call-context#94] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.902 [DefaultDispatcher-worker-8 @call-context#94] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:27.923 [DefaultDispatcher-worker-8 @call-context#94] INFO  ktor.test - Application started in 0.021 seconds.
+2023-04-24 12:51:27.926 [DefaultDispatcher-worker-8 @call-context#94] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:27.943 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.944 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:27.945 [pool-1-thread-1 @coroutine#5] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:27.952 [DefaultDispatcher-worker-8 @call-context#102] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.952 [DefaultDispatcher-worker-8 @call-context#102] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:27.972 [DefaultDispatcher-worker-8 @call-context#102] INFO  ktor.test - Application started in 0.02 seconds.
+2023-04-24 12:51:27.975 [DefaultDispatcher-worker-8 @call-context#102] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:27.984 [DefaultDispatcher-worker-8 @call-context#108] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:27.985 [DefaultDispatcher-worker-8 @call-context#108] INFO  ktor.test - Application started in 0.035 seconds.
+2023-04-24 12:51:28.004 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.004 [pool-1-thread-1 @coroutine#5] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.006 [pool-1-thread-1 @coroutine#5] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.015 [DefaultDispatcher-worker-5 @call-context#124] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.016 [DefaultDispatcher-worker-5 @call-context#124] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.035 [DefaultDispatcher-worker-5 @call-context#124] INFO  ktor.test - Application started in 0.02 seconds.
+2023-04-24 12:51:28.037 [DefaultDispatcher-worker-5 @call-context#124] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.040 [DefaultDispatcher-worker-5 @call-context#130] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.041 [DefaultDispatcher-worker-5 @call-context#130] INFO  ktor.test - Application started in 0.027 seconds.
+2023-04-24 12:51:28.056 [pool-1-thread-1 @coroutine#122] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.056 [pool-1-thread-1 @coroutine#122] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.058 [pool-1-thread-1 @coroutine#122] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.065 [DefaultDispatcher-worker-4 @call-context#139] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.065 [DefaultDispatcher-worker-4 @call-context#139] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.084 [DefaultDispatcher-worker-4 @call-context#139] INFO  ktor.test - Application started in 0.019 seconds.
+2023-04-24 12:51:28.087 [DefaultDispatcher-worker-4 @call-context#139] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.089 [DefaultDispatcher-worker-4 @call-context#145] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.090 [DefaultDispatcher-worker-4 @call-context#145] INFO  ktor.test - Application started in 0.027 seconds.
+2023-04-24 12:51:28.101 [pool-1-thread-1 @coroutine#122] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.102 [pool-1-thread-1 @coroutine#122] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.103 [pool-1-thread-1 @coroutine#122] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.109 [DefaultDispatcher-worker-3 @call-context#154] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.110 [DefaultDispatcher-worker-3 @call-context#154] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.134 [DefaultDispatcher-worker-3 @call-context#154] INFO  ktor.test - Application started in 0.025 seconds.
+2023-04-24 12:51:28.140 [DefaultDispatcher-worker-3 @call-context#154] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.146 [DefaultDispatcher-worker-3 @call-context#160] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.147 [DefaultDispatcher-worker-3 @call-context#160] INFO  ktor.test - Application started in 0.038 seconds.
+2023-04-24 12:51:28.158 [pool-1-thread-1 @coroutine#122] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.158 [pool-1-thread-1 @coroutine#122] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.159 [pool-1-thread-1 @coroutine#122] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.168 [DefaultDispatcher-worker-10 @call-context#170] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.169 [DefaultDispatcher-worker-10 @call-context#170] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.189 [DefaultDispatcher-worker-10 @call-context#170] INFO  ktor.test - Application started in 0.021 seconds.
+2023-04-24 12:51:28.191 [DefaultDispatcher-worker-10 @call-context#170] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.194 [DefaultDispatcher-worker-10 @call-context#176] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.195 [DefaultDispatcher-worker-10 @call-context#176] INFO  ktor.test - Application started in 0.028 seconds.
+2023-04-24 12:51:28.212 [pool-1-thread-1 @coroutine#168] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.212 [pool-1-thread-1 @coroutine#168] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.213 [pool-1-thread-1 @coroutine#168] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.220 [DefaultDispatcher-worker-7 @call-context#191] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.220 [DefaultDispatcher-worker-7 @call-context#191] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.239 [DefaultDispatcher-worker-7 @call-context#191] INFO  ktor.test - Application started in 0.019 seconds.
+2023-04-24 12:51:28.241 [DefaultDispatcher-worker-7 @call-context#191] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.243 [DefaultDispatcher-worker-7 @call-context#197] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.244 [DefaultDispatcher-worker-7 @call-context#197] INFO  ktor.test - Application started in 0.026 seconds.
+2023-04-24 12:51:28.260 [pool-1-thread-1 @coroutine#168] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.260 [pool-1-thread-1 @coroutine#168] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.262 [pool-1-thread-1 @coroutine#168] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.267 [DefaultDispatcher-worker-6 @call-context#212] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.268 [DefaultDispatcher-worker-6 @call-context#212] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.290 [DefaultDispatcher-worker-6 @call-context#212] INFO  ktor.test - Application started in 0.023 seconds.
+2023-04-24 12:51:28.292 [DefaultDispatcher-worker-6 @call-context#212] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.297 [DefaultDispatcher-worker-6 @call-context#218] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.297 [DefaultDispatcher-worker-6 @call-context#218] INFO  ktor.test - Application started in 0.031 seconds.
+2023-04-24 12:51:28.313 [pool-1-thread-1 @coroutine#168] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.313 [pool-1-thread-1 @coroutine#168] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.314 [pool-1-thread-1 @coroutine#168] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.320 [DefaultDispatcher-worker-13 @call-context#233] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.320 [DefaultDispatcher-worker-13 @call-context#233] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.346 [DefaultDispatcher-worker-13 @call-context#233] INFO  ktor.test - Application started in 0.026 seconds.
+2023-04-24 12:51:28.348 [DefaultDispatcher-worker-13 @call-context#233] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.351 [DefaultDispatcher-worker-13 @call-context#239] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.352 [DefaultDispatcher-worker-13 @call-context#239] INFO  ktor.test - Application started in 0.033 seconds.
+2023-04-24 12:51:28.369 [pool-1-thread-1 @coroutine#168] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.369 [pool-1-thread-1 @coroutine#168] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.371 [pool-1-thread-1 @coroutine#168] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.380 [DefaultDispatcher-worker-2 @call-context#255] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.380 [DefaultDispatcher-worker-2 @call-context#255] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.402 [DefaultDispatcher-worker-2 @call-context#255] INFO  ktor.test - Application started in 0.022 seconds.
+2023-04-24 12:51:28.405 [DefaultDispatcher-worker-2 @call-context#255] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.407 [DefaultDispatcher-worker-2 @call-context#261] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.408 [DefaultDispatcher-worker-2 @call-context#261] INFO  ktor.test - Application started in 0.03 seconds.
+2023-04-24 12:51:28.489 [pool-1-thread-1 @coroutine#253] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.489 [pool-1-thread-1 @coroutine#253] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.490 [pool-1-thread-1 @coroutine#253] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.497 [DefaultDispatcher-worker-5 @call-context#295] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.498 [DefaultDispatcher-worker-5 @call-context#295] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.517 [DefaultDispatcher-worker-5 @call-context#295] INFO  ktor.test - Application started in 0.02 seconds.
+2023-04-24 12:51:28.519 [DefaultDispatcher-worker-5 @call-context#295] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.522 [DefaultDispatcher-worker-5 @call-context#301] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.522 [DefaultDispatcher-worker-5 @call-context#301] INFO  ktor.test - Application started in 0.026 seconds.
+2023-04-24 12:51:28.562 [pool-1-thread-1 @coroutine#253] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.562 [pool-1-thread-1 @coroutine#253] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.564 [pool-1-thread-1 @coroutine#253] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.569 [DefaultDispatcher-worker-10 @call-context#335] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.570 [DefaultDispatcher-worker-10 @call-context#335] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.589 [DefaultDispatcher-worker-10 @call-context#335] INFO  ktor.test - Application started in 0.02 seconds.
+2023-04-24 12:51:28.591 [DefaultDispatcher-worker-10 @call-context#335] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.595 [DefaultDispatcher-worker-10 @call-context#341] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.596 [DefaultDispatcher-worker-10 @call-context#341] INFO  ktor.test - Application started in 0.028 seconds.
+2023-04-24 12:51:28.642 [pool-1-thread-1 @coroutine#253] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.642 [pool-1-thread-1 @coroutine#253] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.644 [pool-1-thread-1 @coroutine#253] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.650 [DefaultDispatcher-worker-6 @call-context#375] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.650 [DefaultDispatcher-worker-6 @call-context#375] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.679 [DefaultDispatcher-worker-6 @call-context#375] INFO  ktor.test - Application started in 0.03 seconds.
+2023-04-24 12:51:28.681 [DefaultDispatcher-worker-6 @call-context#375] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.684 [DefaultDispatcher-worker-6 @call-context#381] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.685 [DefaultDispatcher-worker-6 @call-context#381] INFO  ktor.test - Application started in 0.037 seconds.
+2023-04-24 12:51:28.721 [pool-1-thread-1 @coroutine#253] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.722 [pool-1-thread-1 @coroutine#253] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.723 [pool-1-thread-1 @coroutine#253] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.731 [DefaultDispatcher-worker-9 @call-context#416] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.731 [DefaultDispatcher-worker-9 @call-context#416] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.750 [DefaultDispatcher-worker-9 @call-context#416] INFO  ktor.test - Application started in 0.019 seconds.
+2023-04-24 12:51:28.753 [DefaultDispatcher-worker-9 @call-context#416] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.758 [DefaultDispatcher-worker-9 @call-context#422] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.759 [DefaultDispatcher-worker-9 @call-context#422] INFO  ktor.test - Application started in 0.029 seconds.
+2023-04-24 12:51:28.788 [pool-1-thread-1 @coroutine#414] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.789 [pool-1-thread-1 @coroutine#414] WARN  io.lettuce.core.RedisChannelHandler - Connection is already closed
+2023-04-24 12:51:28.790 [pool-1-thread-1 @coroutine#414] INFO  ktor.test - Shutting down Application
+2023-04-24 12:51:28.810 [DefaultDispatcher-worker-6 @call-context#442] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.811 [DefaultDispatcher-worker-6 @call-context#442] INFO  i.m.c.i.push.PushMeterRegistry - publishing metrics for LoggingMeterRegistry every 1m
+2023-04-24 12:51:28.842 [DefaultDispatcher-worker-6 @call-context#442] INFO  ktor.test - Application started in 0.032 seconds.
+2023-04-24 12:51:28.845 [DefaultDispatcher-worker-6 @call-context#442] INFO  ktor.test - RedisManager init Done
+2023-04-24 12:51:28.877 [DefaultDispatcher-worker-12 @call-context#465] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-04-24 12:51:28.878 [DefaultDispatcher-worker-12 @call-context#465] INFO  ktor.test - Application started in 0.068 seconds.
+2023-04-24 12:51:28.894 [DefaultDispatcher-worker-1 @raw-ws-handler#456] ERROR ktor.test - Websocket handler failed
+java.lang.IllegalArgumentException: Keys must not be empty
+	at io.lettuce.core.internal.LettuceAssert.notEmpty(LettuceAssert.java:98)
+	at io.lettuce.core.RedisCommandBuilder.notEmpty(RedisCommandBuilder.java:4171)
+	at io.lettuce.core.RedisCommandBuilder.mgetKeyValue(RedisCommandBuilder.java:1775)
+	at io.lettuce.core.AbstractRedisReactiveCommands.lambda$mget$181(AbstractRedisReactiveCommands.java:1353)
+	at io.lettuce.core.RedisPublisher.&lt;init&gt;(RedisPublisher.java:108)
+	at io.lettuce.core.AbstractRedisReactiveCommands.createFlux(AbstractRedisReactiveCommands.java:607)
+	at io.lettuce.core.AbstractRedisReactiveCommands.createDissolvingFlux(AbstractRedisReactiveCommands.java:592)
+	at io.lettuce.core.AbstractRedisReactiveCommands.mget(AbstractRedisReactiveCommands.java:1353)
+	at io.lettuce.core.api.coroutines.RedisStringCoroutinesCommandsImpl.mget(RedisStringCoroutinesCommandsImpl.kt:91)
+	at io.lettuce.core.api.coroutines.RedisCoroutinesCommandsImpl.mget(RedisCoroutinesCommandsImpl.kt)
+	at com.shinami.modules.suiws.Connection.isSubscriptionLimitReached(Connection.kt:78)
+	at com.shinami.modules.suiws.Connection$isSubscriptionLimitReached$1.invokeSuspend(Connection.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[2023.04.24 12:51:25] (Coverage): Error during class instrumentation: reactor.core.publisher.ContextPropagation: java.lang.RuntimeException: java.io.IOException: Class io/micrometer/context/ContextRegistry not found
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.2</a> at Apr 24, 2023, 12:51:31 PM</p>
+</div>
+</div>
+</body>
+</html>
